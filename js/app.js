@@ -84,49 +84,99 @@ function setActive(id){
     }
   
 }
-$(window).scroll(function() {    
-    var scroll = $(window).scrollTop();
-    //var sectionId = "section"+id;
-   // var section = document.getElementById(sectionId);
-     
-   //section.classList.add("your-active-class");
-   //var listId = "list-"+id;
-   //var list = document.getElementById(listId);
-            
-  //list.classList.add("listActive");
 
-     //>=, not <=
-    if (scroll >= 300) {
-        //clearHeader, not clearheader - caps H
-        $("#section1").addClass("your-active-class");
-        $("#section2").removeClass("your-active-class");
-        $("#section3").removeClass("your-active-class");
-        $("#list-1").addClass("listActive");
-        $("#list-2").removeClass("listActive");
-        $("#list-3").removeClass("listActive");
-        $("#list-2").addClass("listNotActive");
-        $("#list-3").addClass("listNotActive");
-    }
-    if (scroll >= 600) {
-        //clearHeader, not clearheader - caps H
-        $("#section2").addClass("your-active-class");
-        $("#section1").removeClass("your-active-class");
-        $("#section3").removeClass("your-active-class");
-        $("#list-2").addClass("listActive");
-        $("#list-1").removeClass("listActive");
-        $("#list-3").removeClass("listActive");
-        $("#list-1").addClass("listNotActive");
-        $("#list-3").addClass("listNotActive");
-    }
-    if (scroll >= 1200) {
-        //clearHeader, not clearheader - caps H
-        $("#section3").addClass("your-active-class");
-        $("#section1").removeClass("your-active-class");
-        $("#section2").removeClass("your-active-class");
-        $("#list-3").addClass("listActive");
-        $("#list-2").removeClass("listActive");
-        $("#list-1").removeClass("listActive");
-        $("#list-2").addClass("listNotActive");
-        $("#list-1").addClass("listNotActive");
-    }
+window.addEventListener('scroll', function() {
+	var section1 = document.querySelector('#section1');
+	var position1 = section1.getBoundingClientRect();
+    var list1 = document.getElementById("list-1");
+
+    var section2 = document.querySelector('#section2');
+	var position2 = section2.getBoundingClientRect();
+    var list2 = document.getElementById("list-2");
+
+    var section3 = document.querySelector('#section3');
+	var position3 = section3.getBoundingClientRect();
+    var list3 = document.getElementById("list-3");
+
+     
+
+           
+
+	// checking whether fully visible
+	if(position1.top >= 0 && position1.bottom <= window.innerHeight) {
+        section1.classList.add("your-active-class");
+        list1.classList.add("listActive");
+
+        section2.classList.remove("your-active-class");
+        section3.classList.remove("your-active-class");
+        list2.classList.remove("listActive");
+        list3.classList.remove("listActive");
+        list2.classList.add("listNotActive");
+        list3.classList.add("listNotActive");
+	}
+
+	// checking for partial visibility
+	if(position1.top < window.innerHeight && position1.bottom >= 0) {
+		section1.classList.add("your-active-class");
+        list1.classList.add("listActive");
+
+        section2.classList.remove("your-active-class");
+        section3.classList.remove("your-active-class");
+        list2.classList.remove("listActive");
+        list3.classList.remove("listActive");
+        list2.classList.add("listNotActive");
+        list3.classList.add("listNotActive");
+	}
+
+    if(position2.top >= 0 && position2.bottom <= window.innerHeight) {
+        section2.classList.add("your-active-class");
+        list2.classList.add("listActive");
+
+        section1.classList.remove("your-active-class");
+        section3.classList.remove("your-active-class");
+        list1.classList.remove("listActive");
+        list3.classList.remove("listActive");
+        list1.classList.add("listNotActive");
+        list3.classList.add("listNotActive");
+	}
+
+	// checking for partial visibility
+	if(position2.top < window.innerHeight && position2.bottom >= 0) {
+		section2.classList.add("your-active-class");
+        list2.classList.add("listActive");
+
+        section1.classList.remove("your-active-class");
+        section3.classList.remove("your-active-class");
+        list1.classList.remove("listActive");
+        list3.classList.remove("listActive");
+        list1.classList.add("listNotActive");
+        list3.classList.add("listNotActive");
+	}
+
+
+if(position3.top >= 0 && position3.bottom <= window.innerHeight) {
+    section3.classList.add("your-active-class");
+    list3.classList.add("listActive");
+
+    section2.classList.remove("your-active-class");
+    section1.classList.remove("your-active-class");
+    list2.classList.remove("listActive");
+    list1.classList.remove("listActive");
+    list2.classList.add("listNotActive");
+    list1.classList.add("listNotActive");
+}
+
+// checking for partial visibility
+if(position3.top < window.innerHeight && position3.bottom >= 0) {
+    section3.classList.add("your-active-class");
+    list3.classList.add("listActive");
+
+    section2.classList.remove("your-active-class");
+    section1.classList.remove("your-active-class");
+    list2.classList.remove("listActive");
+    list1.classList.remove("listActive");
+    list2.classList.add("listNotActive");
+    list1.classList.add("listNotActive");
+}
+
 });
