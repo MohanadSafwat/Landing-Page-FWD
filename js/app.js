@@ -56,6 +56,10 @@
 
 
 function setActive(id){
+    var element = document.getElementById("navbar__list");
+    console.log(element);
+    element.style.display = "none";
+
     for(var  i = 1 ; i <= 3 ; i++ )
     {
         if(i == id)
@@ -82,6 +86,9 @@ function setActive(id){
             list.classList.add("listNotActive");
         }
     }
+    setTimeout(()=>{
+        element.style.display = "block";
+    }, 500);
   
 }
 
@@ -100,9 +107,6 @@ window.addEventListener('scroll', function() {
 
      
 
-           
-
-	// checking whether fully visible
 	if(position1.top >= 0 && position1.bottom <= window.innerHeight) {
         section1.classList.add("your-active-class");
         list1.classList.add("listActive");
@@ -115,8 +119,8 @@ window.addEventListener('scroll', function() {
         list3.classList.add("listNotActive");
 	}
 
-	// checking for partial visibility
-	if(position1.top < window.innerHeight && position1.bottom >= 0) {
+
+	if(position1.top < window.innerHeight -200 && position1.bottom >= 0) {
 		section1.classList.add("your-active-class");
         list1.classList.add("listActive");
 
@@ -140,8 +144,8 @@ window.addEventListener('scroll', function() {
         list3.classList.add("listNotActive");
 	}
 
-	// checking for partial visibility
-	if(position2.top < window.innerHeight && position2.bottom >= 0) {
+
+	if(position2.top < window.innerHeight -200 && position2.bottom >= 0) {
 		section2.classList.add("your-active-class");
         list2.classList.add("listActive");
 
@@ -166,8 +170,8 @@ if(position3.top >= 0 && position3.bottom <= window.innerHeight) {
     list1.classList.add("listNotActive");
 }
 
-// checking for partial visibility
-if(position3.top < window.innerHeight && position3.bottom >= 0) {
+
+if(position3.top < window.innerHeight -200&& position3.bottom >= 0) {
     section3.classList.add("your-active-class");
     list3.classList.add("listActive");
 
