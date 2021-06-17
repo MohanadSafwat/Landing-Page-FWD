@@ -75,7 +75,7 @@ section {
 
 .navbar__menu .listNotActive {
     display: inline-block;
-    padding: 20px 10px;
+    padding: 20px 0px;
     opacity: 0.8;
     color: rgb(0 13 60) !important;
     height: 20px;
@@ -83,8 +83,7 @@ section {
 }
 .navbar__menu a {
     text-decoration: none;
-
-    padding: 20px 10px;
+    padding: 20px ;
     opacity: 0.8;
 
     height: 20px;
