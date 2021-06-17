@@ -66,12 +66,21 @@ section {
 /* Navigation Styles*/
 .navbar__menu ul {
     padding-left: 0;
-    margin: 0;
+    margin: 0 100px 0 0 !important;
     text-align: right;
+    
 }
 
 .navbar__menu li {
     display: inline-block;
+    padding: 30px 10px;
+    opacity: 0.8;
+    color: rgb(0 13 60);
+    height: 20px;
+    cursor: pointer;
+}
+.navbar__menu li:hover{
+    opacity: 0.5;
 }
 
 .navbar__menu .menu__link {
@@ -90,11 +99,12 @@ section {
 
 /* Header Styles */
 .page__header {
-    background: #fff;
+    background-color: aqua;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 5;
+    border-radius: 5px;
 }
 
 /* Footer Styles */
