@@ -76,8 +76,9 @@ section {
 .navbar__menu .listNotActive {
     display: inline-block;
     padding: 20px 0px;
-    opacity: 0.8;
-    color: rgb(0 13 60) !important;
+
+   /* color: rgb(0 13 60) !important;*/
+   color: white;
     height: 20px;
     cursor: pointer;
 }
@@ -103,7 +104,8 @@ section {
     color: white !important;
     height: 20px;
     border-radius: 2px;
-    background-color:rgba(0,13,60,1) ;
+    /*background-color:rgba(0,13,60,1) ;*/
+    background-color:rgb(82 128 128) ;
     cursor: pointer;
 }
 .navbar__menu .listActive:hover{
@@ -128,7 +130,7 @@ section {
 /* Header Styles */
 .page__header {
     margin: 10px 0 ;
-    background-color: #FFF;
+    background-color: transparent;
     position: fixed;
     top: 0;
     width: 100%;
