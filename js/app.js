@@ -62,25 +62,71 @@ function setActive(id){
         {
             var sectionId = "section"+id;
             var section = document.getElementById(sectionId);
-            console.log(section);
+     
             section.classList.add("your-active-class");
             var listId = "list-"+id;
             var list = document.getElementById(listId);
-            console.log(list);
+            
             list.classList.add("listActive");
         }
         else
         {
             var sectionId = "section"+i;
             var section = document.getElementById(sectionId);
-            console.log(section);
+
             section.classList.remove("your-active-class");
             var listId = "list-"+i;
             var list = document.getElementById(listId);
-            console.log(list);
+   
             list.classList.remove("listActive");
             list.classList.add("listNotActive");
         }
     }
   
 }
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+    //var sectionId = "section"+id;
+   // var section = document.getElementById(sectionId);
+     
+   //section.classList.add("your-active-class");
+   //var listId = "list-"+id;
+   //var list = document.getElementById(listId);
+            
+  //list.classList.add("listActive");
+
+     //>=, not <=
+    if (scroll >= 300) {
+        //clearHeader, not clearheader - caps H
+        $("#section1").addClass("your-active-class");
+        $("#section2").removeClass("your-active-class");
+        $("#section3").removeClass("your-active-class");
+        $("#list-1").addClass("listActive");
+        $("#list-2").removeClass("listActive");
+        $("#list-3").removeClass("listActive");
+        $("#list-2").addClass("listNotActive");
+        $("#list-3").addClass("listNotActive");
+    }
+    if (scroll >= 600) {
+        //clearHeader, not clearheader - caps H
+        $("#section2").addClass("your-active-class");
+        $("#section1").removeClass("your-active-class");
+        $("#section3").removeClass("your-active-class");
+        $("#list-2").addClass("listActive");
+        $("#list-1").removeClass("listActive");
+        $("#list-3").removeClass("listActive");
+        $("#list-1").addClass("listNotActive");
+        $("#list-3").addClass("listNotActive");
+    }
+    if (scroll >= 1200) {
+        //clearHeader, not clearheader - caps H
+        $("#section3").addClass("your-active-class");
+        $("#section1").removeClass("your-active-class");
+        $("#section2").removeClass("your-active-class");
+        $("#list-3").addClass("listActive");
+        $("#list-2").removeClass("listActive");
+        $("#list-1").removeClass("listActive");
+        $("#list-2").addClass("listNotActive");
+        $("#list-1").addClass("listNotActive");
+    }
+});
