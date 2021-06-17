@@ -8,7 +8,9 @@
  *
 */
 
-
+html{
+    scroll-behavior: smooth;
+}
 /* ---- Base Rules ---- */
 body {
     background: rgb(136,203,171);
@@ -71,16 +73,42 @@ section {
     
 }
 
-.navbar__menu li {
+.navbar__menu .listNotActive {
     display: inline-block;
-    padding: 30px 10px;
+    padding: 20px 10px;
     opacity: 0.8;
-    color: rgb(0 13 60);
+    color: rgb(0 13 60) !important;
     height: 20px;
     cursor: pointer;
 }
-.navbar__menu li:hover{
+.navbar__menu a {
+    text-decoration: none;
+
+    padding: 20px 10px;
+    opacity: 0.8;
+
+    height: 20px;
+    cursor: pointer;
+}
+.navbar__menu a:visited {
+    color: inherit;
+}
+.navbar__menu .listNotActive:hover{
     opacity: 0.5;
+}
+
+.navbar__menu .listActive {
+    display: inline-block;
+    padding: 20px 50px;
+    opacity: 1;
+    color: white !important;
+    height: 20px;
+    border-radius: 2px;
+    background-color:rgba(0,13,60,1) ;
+    cursor: pointer;
+}
+.navbar__menu .listActive:hover{
+    opacity: 1;
 }
 
 .navbar__menu .menu__link {
@@ -89,6 +117,7 @@ section {
     font-weight: bold;
     text-decoration: none;
     color: #000;
+    width: 100%;
 }
 
 .navbar__menu .menu__link:hover {
@@ -99,7 +128,8 @@ section {
 
 /* Header Styles */
 .page__header {
-    background-color: aqua;
+    margin: 10px 0 ;
+    background-color: #FFF;
     position: fixed;
     top: 0;
     width: 100%;

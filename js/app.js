@@ -55,3 +55,32 @@
 // Set sections as active
 
 
+function setActive(id){
+    for(var  i = 1 ; i <= 3 ; i++ )
+    {
+        if(i == id)
+        {
+            var sectionId = "section"+id;
+            var section = document.getElementById(sectionId);
+            console.log(section);
+            section.classList.add("your-active-class");
+            var listId = "list-"+id;
+            var list = document.getElementById(listId);
+            console.log(list);
+            list.classList.add("listActive");
+        }
+        else
+        {
+            var sectionId = "section"+i;
+            var section = document.getElementById(sectionId);
+            console.log(section);
+            section.classList.remove("your-active-class");
+            var listId = "list-"+i;
+            var list = document.getElementById(listId);
+            console.log(list);
+            list.classList.remove("listActive");
+            list.classList.add("listNotActive");
+        }
+    }
+  
+}
