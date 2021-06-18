@@ -1,61 +1,6 @@
-/**
- * 
- * Manipulating the DOM exercise.
- * Exercise programmatically builds navigation,
- * scrolls to anchors from navigation,
- * and highlights section in viewport upon scrolling.
- * 
- * Dependencies: None
- * 
- * JS Version: ES2015/ES6
- * 
- * JS Standard: ESlint
- * 
-*/
-
-/**
- * Define Global Variables
- * 
-*/
-
-
-/**
- * End Global Variables
- * Start Helper Functions
- * 
-*/
-
-
-
-/**
- * End Helper Functions
- * Begin Main Functions
- * 
-*/
-
-// build the nav
-
-
-// Add class 'active' to section when near top of viewport
-
-
-// Scroll to anchor ID using scrollTO event
-
-
-/**
- * End Main Functions
- * Begin Events
- * 
-*/
-
-// Build menu 
-
-// Scroll to section on link click
-
-// Set sections as active
-
-
+//setActive() deah function 3shan lmma ados 3la ay button fe el nav bar t set el section we el button dah we yb2a active
 function setActive(id){
+    // ba5fy el nav bar mo2qtan lmma bados 3la ay button we brg3 azhroh tany b3d 0.5 second
     var element = document.getElementById("navbar__list");
     console.log(element);
     element.style.display = "none";
@@ -91,7 +36,7 @@ function setActive(id){
     }, 500);
   
 }
-
+// dah 3shan lmma ba scroll el active section we el active button yt8yroh according le el position elly ana feah 
 window.addEventListener('scroll', function() {
 	var section1 = document.querySelector('#section1');
 	var position1 = section1.getBoundingClientRect();
@@ -106,7 +51,7 @@ window.addEventListener('scroll', function() {
     var list3 = document.getElementById("list-3");
 
      
-
+// lw ana fe position awl section
 	if(position1.top >= 0 && position1.bottom <= window.innerHeight) {
         section1.classList.add("your-active-class");
         list1.classList.add("listActive");
@@ -132,6 +77,7 @@ window.addEventListener('scroll', function() {
         list3.classList.add("listNotActive");
 	}
 
+// lw ana fe position tany section
     if(position2.top >= 0 && position2.bottom <= window.innerHeight) {
         section2.classList.add("your-active-class");
         list2.classList.add("listActive");
@@ -157,7 +103,7 @@ window.addEventListener('scroll', function() {
         list3.classList.add("listNotActive");
 	}
 
-
+// lw ana fe position talt section
 if(position3.top >= 0 && position3.bottom <= window.innerHeight) {
     section3.classList.add("your-active-class");
     list3.classList.add("listActive");
