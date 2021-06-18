@@ -137,7 +137,7 @@ if(position3.top < window.innerHeight -200&& position3.bottom >= 0) {
 }
 
 });
-// 3shan 
+// 3shan n toglle el menu fe el screen el so8yra
 function toggle(flag){
     var menu = document.getElementById("menu");
     var list1 = document.querySelectorAll("li");
@@ -160,17 +160,22 @@ function toggle(flag){
     }
     else
     {
+        console.log(menu.style.display);
+        if(screen.width<600)
+        {
         if(list1[0].style.display == "block" && list1[1].style.display == "block" && list1[2].style.display == "block")
         {
             list1[0].style.display = "block";
             list1[1].style.display = "block";
             list1[2].style.display = "block";
+            console.log("1");
         }
-        else{
+        else {
             list1[0].style.display = "none";
             list1[1].style.display = "none";
             list1[2].style.display = "none";
-        }
+        
+        }}
     }
 
 
