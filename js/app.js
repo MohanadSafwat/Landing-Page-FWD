@@ -15,7 +15,8 @@ function setActive(id){
             section.classList.add("your-active-class");
             var listId = "list-"+id;
             var list = document.getElementById(listId);
-            
+           // list.classList.remove("listNotActive");
+
             list.classList.add("listActive");
         }
         else
@@ -28,7 +29,7 @@ function setActive(id){
             var list = document.getElementById(listId);
    
             list.classList.remove("listActive");
-            list.classList.add("listNotActive");
+         //   list.classList.add("listNotActive");
         }
     }
     setTimeout(()=>{
@@ -55,78 +56,114 @@ window.addEventListener('scroll', function() {
 	if(position1.top >= 0 && position1.bottom <= window.innerHeight) {
         section1.classList.add("your-active-class");
         list1.classList.add("listActive");
+       // list1.classList.remove("listNotActive");
+
 
         section2.classList.remove("your-active-class");
         section3.classList.remove("your-active-class");
         list2.classList.remove("listActive");
         list3.classList.remove("listActive");
-        list2.classList.add("listNotActive");
-        list3.classList.add("listNotActive");
+        // list2.classList.add("listNotActive");
+        // list3.classList.add("listNotActive");
 	}
 
 
 	if(position1.top < window.innerHeight -200 && position1.bottom >= 0) {
 		section1.classList.add("your-active-class");
         list1.classList.add("listActive");
+     //   list1.classList.remove("listNotActive");
+
 
         section2.classList.remove("your-active-class");
         section3.classList.remove("your-active-class");
         list2.classList.remove("listActive");
         list3.classList.remove("listActive");
-        list2.classList.add("listNotActive");
-        list3.classList.add("listNotActive");
+      //  list2.classList.add("listNotActive");
+     //   list3.classList.add("listNotActive");
 	}
 
 // lw ana fe position tany section
     if(position2.top >= 0 && position2.bottom <= window.innerHeight) {
         section2.classList.add("your-active-class");
         list2.classList.add("listActive");
+       // list2.classList.remove("listNotActive");
+
 
         section1.classList.remove("your-active-class");
         section3.classList.remove("your-active-class");
         list1.classList.remove("listActive");
         list3.classList.remove("listActive");
-        list1.classList.add("listNotActive");
-        list3.classList.add("listNotActive");
+     //   list1.classList.add("listNotActive");
+   //     list3.classList.add("listNotActive");
 	}
 
 
 	if(position2.top < window.innerHeight -200 && position2.bottom >= 0) {
 		section2.classList.add("your-active-class");
         list2.classList.add("listActive");
+      //  list2.classList.remove("listNotActive");
+
 
         section1.classList.remove("your-active-class");
         section3.classList.remove("your-active-class");
         list1.classList.remove("listActive");
         list3.classList.remove("listActive");
-        list1.classList.add("listNotActive");
-        list3.classList.add("listNotActive");
+     //   list1.classList.add("listNotActive");
+    //    list3.classList.add("listNotActive");
 	}
 
 // lw ana fe position talt section
 if(position3.top >= 0 && position3.bottom <= window.innerHeight) {
     section3.classList.add("your-active-class");
     list3.classList.add("listActive");
+   // list3.classList.remove("listNotActive");
+
 
     section2.classList.remove("your-active-class");
     section1.classList.remove("your-active-class");
     list2.classList.remove("listActive");
     list1.classList.remove("listActive");
-    list2.classList.add("listNotActive");
-    list1.classList.add("listNotActive");
+   // list2.classList.add("listNotActive");
+  //  list1.classList.add("listNotActive");
 }
 
 
 if(position3.top < window.innerHeight -200&& position3.bottom >= 0) {
     section3.classList.add("your-active-class");
     list3.classList.add("listActive");
+  //  list3.classList.remove("listNotActive");
+
 
     section2.classList.remove("your-active-class");
     section1.classList.remove("your-active-class");
     list2.classList.remove("listActive");
     list1.classList.remove("listActive");
-    list2.classList.add("listNotActive");
-    list1.classList.add("listNotActive");
+    //list2.classList.add("listNotActive");
+  //  list1.classList.add("listNotActive");
 }
 
 });
+
+function toggle(){
+    var menu = document.getElementById("menu");
+    var list1 = document.querySelectorAll("li");
+ 
+
+    if(list1[0].style.display == "none")
+    {
+        list1[0].style.display = "block";
+        list1[1].style.display = "block";
+        list1[2].style.display = "block";
+    }
+    else
+    {
+        list1[0].style.display = "none";
+        list1[1].style.display = "none";
+        list1[2].style.display = "none";
+    }
+
+
+   // console.log(list1[0]);
+
+
+}

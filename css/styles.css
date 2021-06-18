@@ -68,14 +68,15 @@ section {
 /* Navigation Styles*/
 .navbar__menu ul {
     padding-left: 0;
-    margin: 0 100px 0 0 !important;
+    margin: 0 100px 0 0 ;
     text-align: right;
     
 }
 
-.navbar__menu .listNotActive {
+.navbar__menu li {
     display: inline-block;
     padding: 20px 0px;
+    ;
 
    /* color: rgb(0 13 60) !important;*/
    color: white;
@@ -93,9 +94,62 @@ section {
 .navbar__menu a:visited {
     color: inherit;
 }
-.navbar__menu .listNotActive:hover{
+.navbar__menu li:hover{
     opacity: 0.5;
 }
+.navbar__menu i {
+   
+    margin: 25px;
+    font-size: 25px;
+    padding: 5px;
+    border: #fff solid 1px;
+    border-radius: 2px;
+    float: right;
+}
+
+@media screen and (max-width: 600px){
+   
+    .navbar__menu .listActive {
+        display: none ;
+        padding: 1em 0em !important ;
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+        width: 100%;
+       
+    }
+    .navbar__menu ul {
+        margin: 0px;
+       
+    }
+    .navbar__menu li {
+        display: none ;
+        padding: 1em 0em; 
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+        width: 100%;
+        background-color: #333333b8;
+        width: 100%;
+       
+    }
+    .navbar__menu i {
+        display: block;
+       
+    }
+    
+}
+@media screen and (min-width: 600px){
+    .navbar__menu i {
+        display: none;
+       
+    }
+    .navbar__menu div{
+        display: none;
+       
+    }
+}
+
 
 .navbar__menu .listActive {
     display: inline-block;
