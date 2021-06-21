@@ -76,7 +76,7 @@ section {
 .navbar__menu li {
     display: inline-block;
     padding: 20px 0px;
-    ;
+    
 
    /* color: rgb(0 13 60) !important;*/
    color: white;
@@ -87,12 +87,12 @@ section {
     text-decoration: none;
     padding: 20px ;
     opacity: 0.8;
-
+    color: rgb(31 56 84);
     height: 20px;
     cursor: pointer;
 }
 .navbar__menu a:visited {
-    color: inherit;
+    color: rgb(31 56 84);
 }
 .navbar__menu li:hover{
     opacity: 0.5;
@@ -108,13 +108,20 @@ section {
 }
 
 @media screen and (max-width: 600px){
-   
+    .navbar__menu a {
+        
+        color: white !important;
+        
+    }
+    .navbar__menu a:visited {
+        color: white !important;
+    }
     .navbar__menu .listActive {
         display: none ;
         padding: 1em 0em !important ;
         font-weight: bold;
         text-decoration: none;
-        color: white;
+        color: white ;
         width: 100%;
        
     }
@@ -136,6 +143,11 @@ section {
     .navbar__menu i {
         display: block;
        
+    }
+    .page__header {
+
+        background-color: transparent !important;
+        
     }
     
 }
@@ -184,7 +196,7 @@ section {
 /* Header Styles */
 .page__header {
     margin: 10px 0 ;
-    background-color: transparent;
+    background-color: white;
     position: fixed;
     top: 0;
     width: 100%;

@@ -5,7 +5,7 @@ function setActive(id){
     console.log(element);
     element.style.display = "none";
 
-    for(var  i = 1 ; i <= 3 ; i++ )
+    for(var  i = 1 ; i <= 4 ; i++ )
     {
         if(i == id)
         {
@@ -49,6 +49,10 @@ window.addEventListener('scroll', function() {
 	var position3 = section3.getBoundingClientRect();
     var list3 = document.getElementById("list-3");
 
+    var section4 = document.querySelector('#section4');
+	var position4 = section4.getBoundingClientRect();
+    var list4 = document.getElementById("list-4");
+
      
 // lw ana fe position awl section
 	if(position1.top >= 0 && position1.bottom <= window.innerHeight) {
@@ -58,6 +62,8 @@ window.addEventListener('scroll', function() {
 
         section2.classList.remove("your-active-class");
         section3.classList.remove("your-active-class");
+        section4.classList.remove("your-active-class");
+        list4.classList.remove("listActive");
         list2.classList.remove("listActive");
         list3.classList.remove("listActive");
         toggle(0);
@@ -72,6 +78,8 @@ window.addEventListener('scroll', function() {
 
         section2.classList.remove("your-active-class");
         section3.classList.remove("your-active-class");
+        section4.classList.remove("your-active-class");
+        list4.classList.remove("listActive");
         list2.classList.remove("listActive");
         list3.classList.remove("listActive");
         toggle(0);
@@ -86,6 +94,8 @@ window.addEventListener('scroll', function() {
 
         section1.classList.remove("your-active-class");
         section3.classList.remove("your-active-class");
+        section4.classList.remove("your-active-class");
+        list4.classList.remove("listActive");
         list1.classList.remove("listActive");
         list3.classList.remove("listActive");
         toggle(0);
@@ -101,6 +111,8 @@ window.addEventListener('scroll', function() {
 
         section1.classList.remove("your-active-class");
         section3.classList.remove("your-active-class");
+        section4.classList.remove("your-active-class");
+        list4.classList.remove("listActive");
         list1.classList.remove("listActive");
         list3.classList.remove("listActive");
         toggle(0);
@@ -116,6 +128,8 @@ if(position3.top >= 0 && position3.bottom <= window.innerHeight) {
 
     section2.classList.remove("your-active-class");
     section1.classList.remove("your-active-class");
+    section4.classList.remove("your-active-class");
+    list4.classList.remove("listActive");
     list2.classList.remove("listActive");
     list1.classList.remove("listActive");
     toggle(0);
@@ -129,12 +143,48 @@ if(position3.top < window.innerHeight -200&& position3.bottom >= 0) {
 
     section2.classList.remove("your-active-class");
     section1.classList.remove("your-active-class");
+    section4.classList.remove("your-active-class");
+    list4.classList.remove("listActive");
+    list2.classList.remove("listActive");
+    list1.classList.remove("listActive");
+
+    toggle(0);
+}
+
+    // lw ana fe position rab3 section
+if(position4.top >= 0 && position4.bottom <= window.innerHeight) {
+    section4.classList.add("your-active-class");
+    list4.classList.add("listActive");
+
+
+
+    section2.classList.remove("your-active-class");
+    section1.classList.remove("your-active-class");
+    section3.classList.remove("your-active-class");
+    list3.classList.remove("listActive");
+    list2.classList.remove("listActive");
+    list1.classList.remove("listActive");
+    toggle(0);
+
+}
+
+
+if(position4.top < window.innerHeight -200&& position4.bottom >= 0) {
+    section4.classList.add("your-active-class");
+    list4.classList.add("listActive");
+
+    section2.classList.remove("your-active-class");
+    section1.classList.remove("your-active-class");
+    section3.classList.remove("your-active-class");
+    list3.classList.remove("listActive");
     list2.classList.remove("listActive");
     list1.classList.remove("listActive");
 
     toggle(0);
 
 }
+
+
 
 });
 // 3shan n toglle el menu fe el screen el so8yra
