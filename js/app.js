@@ -2,7 +2,6 @@
 function setActive(id){
     // ba5fy el nav bar mo2qtan lmma bados 3la ay button we brg3 azhroh tany b3d 0.5 second
     var element = document.getElementById("navbar__list");
-    console.log(element);
     element.style.display = "none";
 
     for(var  i = 1 ; i <= 4 ; i++ )
@@ -200,30 +199,33 @@ function toggle(flag){
             list1[0].style.display = "block";
             list1[1].style.display = "block";
             list1[2].style.display = "block";
+            list1[3].style.display = "block";
         }
         else
         {
             list1[0].style.display = "none";
             list1[1].style.display = "none";
             list1[2].style.display = "none";
+            list1[3].style.display = "none";
         }
     }
     else
     {
-        console.log(menu.style.display);
         if(screen.width<600)
         {
-        if(list1[0].style.display == "block" && list1[1].style.display == "block" && list1[2].style.display == "block")
+        if(list1[0].style.display == "block" && list1[1].style.display == "block" && list1[2].style.display == "block" && list1[3].style.display == "block")
         {
             list1[0].style.display = "block";
             list1[1].style.display = "block";
             list1[2].style.display = "block";
-            console.log("1");
+            list1[3].style.display = "block";
+            
         }
         else {
             list1[0].style.display = "none";
             list1[1].style.display = "none";
             list1[2].style.display = "none";
+            list1[3].style.display = "none";
         
         }}
     }

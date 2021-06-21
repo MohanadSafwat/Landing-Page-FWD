@@ -160,6 +160,11 @@ section {
         display: none;
        
     }
+    .navbar__menu li {
+        display: inline-block !important ;
+        
+       
+    }
 }
 
 
